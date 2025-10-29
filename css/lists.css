@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Marker+Hatch&family=Rubik+Moonrocks&family=Rubik+Pixels&display=swap');
+
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+    font-size: 5vw;
+    color: blueviolet;
+}
+
+/* Скидання стандартних відступів для списків */
+ul, ol, dl {
+    margin: 2;
+    padding: 2;
+    text-align: left;
+    color: blue;
+    font-size: 24px;
+}
+
+/* Вирівнюємо елементи li по лівому краю */
+ul li, ol li, dl dt, dl dd {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+/* Стиль для другого списку */
+.ul2 li::marker {
+    color: brown;
+    font-size: 1.2em;
+}
+
+/* Емоджі-маркери */
+@counter-style hearts {
+    system: cyclic;
+    symbols: "💚" "💛" "💙" "💖";
+    suffix: " ";
+}
+
+ul.hearts {
+    list-style: hearts;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+    font-family: "Segoe UI Emoji", Arial, sans-serif;
+}
