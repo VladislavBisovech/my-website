@@ -1,0 +1,50 @@
+body{
+    background-color: chartreuse;
+}
+p{
+    font-size: 50px;
+}
+.P1{
+    background-color: darkgreen;
+    color: gold;
+    text-align: center;
+}
+
+.P2 {
+    font-family: "Georgia", "Times", "Times New Roman", serif;
+}
+
+.P3 {
+    font-family: "Verdana", "Helvetica", "Arial", sans-serif;
+    font-style: italic;
+}
+.P4{
+     font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 700;
+}
+.P5{
+    font-family: cursive;
+    text-decoration: underline;
+   text-decoration-style: wavy;
+   text-underline-position: under;
+   text-decoration-color: blueviolet;
+}
+.P6{
+    font-family: "Lobster", sans-serif;
+    text-shadow: 0 0 15px red;
+}
+.P7{
+    font-family: "Rubik Moonrocks", sans-serif;
+     text-shadow: 2px 2px red, 5px -5px blue
+}
+.P8{
+     font-family: "Rubik Pixels", system-ui;
+}
+.P9{
+    text-transform: uppercase;
+}
+S1{
+   font-size: 1,5em;
+   color: darkorange;
+   font-family: "Rubik Marker Hatch", system-ui;
+}
