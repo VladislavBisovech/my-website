@@ -1,0 +1,22 @@
+h1{
+    font-weight: 400;
+    font-family: ''Linux Libertine', 'Georgia', 'Times', 'Source Serif 4', serif;
+    letter-spasing: 2px
+}
+p{
+    line-height: 24px;
+    text-indent: 24px;
+     text-align: justify;
+     word-spacing: 5px;
+
+}
+.fr{
+    float: right;
+    margin: 20px;
+    border: solid 1px lightgray
+
+}
+.fr figcaption{
+    color: grey;
+    padding: 0 6px 6px;
+}
