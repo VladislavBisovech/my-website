@@ -1,33 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<ul> <li><a href="Ukraine.html" class="myButton" target="_blank">Завдання: Україна</a></li> <li><a href="forms.html" class="myButton" target="_blank">Завдання: Forms</a></li> <li><a href="buttons.html" <ul> <li><a href="Ukraine.html" class="myButton" target="_blank">Завдання: Україна</a></li> <li><a href="forms.html" class="myButton" target="_blank">Завдання: Forms</a></li> <li><a href="buttons.html" class="myButton" target="_blank">Завдання: Buttons</a></li> </ul> <hr> <a href="Ukraine.html" class="myButton" target="_blank">Відкрити Україну</a> <a href="forms.html" class="myButton" target="_blank">Відкрити Forms</a> <a hre!DOCTYPE html>
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна сторінка</title>
     <link rel="stylesheet" href="css/buttons.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+        }
+        .myButton {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Мої завдання</h1>
-
-    <p>Оберіть сторінку:</p>
+    <p>Оберіть завдання для відкриття:</p>
 
     <ul>
-        <li><a href="Ukraine.html" class="list" target="_blank">Завдання: Україна</a></li>
-        <li><a href="forms.html" class="list" target="_blank">Завдання: Forms</a></li>
-        <li><a href="buttons.html" class="list" target="_blank">Завдання: Buttons</a></li>
+        <li><a href="Ukraine.html" class="myButton" target="_blank">Завдання: Україна</a></li>
+        <li><a href="forms.html" class="myButton" target="_blank">Завдання: Forms</a></li>
+        <li><a href="buttons.html" class="myButton" target="_blank">Завдання: Buttons</a></li>
     </ul>
 
-    <br>
+    <hr>
 
-    <!-- Кнопки -->
-    <a href="Ukraine.html" class="myButton">Відкрити Україну</a>
+    <p>Або відкрийте завдання окремо за кнопками:</p>
+    <a href="Ukraine.html" class="myButton" target="_blank">Відкрити Україну</a>
+    <a href="forms.html" class="myButton" target="_blank">Відкрити Forms</a>
+    <a href="buttons.html" class="myButton" target="_blank">Відкрити Buttons</a>
 
-    <br><br>
+    <hr>
 
-    <a href="forms.html"><button class="button-85" role="button">Відкрити Forms</button></a>
+    <p>Відкрити всі завдання одразу:</p>
+    <button class="myButton" onclick="openAllTasks()">Відкрити всі завдання</button>
 
-    <br><br>
-
-    <a href="buttons.html"><button class="button-85" role="button">Відкрити Buttons</button></a>
+    <script>
+        function openAllTasks() {
+            window.open('Ukraine.html', '_blank');
+            window.open('forms.html', '_blank');
+            window.open('buttons.html', '_blank');
+        }
+    </script>
 </body>
 </html>
