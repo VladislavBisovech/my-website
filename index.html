@@ -1,10 +1,9 @@
-<ul> <li><a href="Ukraine.html" class="myButton" target="_blank">Завдання: Україна</a></li> <li><a href="forms.html" class="myButton" target="_blank">Завдання: Forms</a></li> <li><a href="buttons.html" <ul> <li><a href="Ukraine.html" class="myButton" target="_blank">Завдання: Україна</a></li> <li><a href="forms.html" class="myButton" target="_blank">Завдання: Forms</a></li> <li><a href="buttons.html" class="myButton" target="_blank">Завдання: Buttons</a></li> </ul> <hr> <a href="Ukraine.html" class="myButton" target="_blank">Відкрити Україну</a> <a href="forms.html" class="myButton" target="_blank">Відкрити Forms</a> <a hre!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна сторінка</title>
-    <link rel="stylesheet" href="css/buttons.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,7 +35,7 @@
 </head>
 <body>
     <h1>Мої завдання</h1>
-    <p>Оберіть завдання для відкриття:</p>
+    <p>Клацніть на посилання для переходу до завдання:</p>
 
     <ul>
         <li><a href="Ukraine.html" class="myButton" target="_blank">Завдання: Україна</a></li>
@@ -44,24 +43,5 @@
         <li><a href="buttons.html" class="myButton" target="_blank">Завдання: Buttons</a></li>
     </ul>
 
-    <hr>
-
-    <p>Або відкрийте завдання окремо за кнопками:</p>
-    <a href="Ukraine.html" class="myButton" target="_blank">Відкрити Україну</a>
-    <a href="forms.html" class="myButton" target="_blank">Відкрити Forms</a>
-    <a href="buttons.html" class="myButton" target="_blank">Відкрити Buttons</a>
-
-    <hr>
-
-    <p>Відкрити всі завдання одразу:</p>
-    <button class="myButton" onclick="openAllTasks()">Відкрити всі завдання</button>
-
-    <script>
-        function openAllTasks() {
-            window.open('Ukraine.html', '_blank');
-            window.open('forms.html', '_blank');
-            window.open('buttons.html', '_blank');
-        }
-    </script>
 </body>
 </html>
