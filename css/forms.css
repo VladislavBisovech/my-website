@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Marker+Hatch&family=Rubik+Moonrocks&family=Rubik+Pixels&display=swap');
+body{
+    background-color: beige;
+
+}
+input{
+    font-family:"Lobster", sans-serif;
+    font-size: 24px;
+}
+p{
+    font-size: 24px;
+}
+.btn1{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: cadetblue;
+    background-color: chocolate;
+    border: double green 5px;
+}
+.btn1:hover {
+    color: chocolate;
+    background-color: cadetblue;
+    border: double greenyellow 5px;
+    box-shadow: 5px -5px 10px yellow;
+}
