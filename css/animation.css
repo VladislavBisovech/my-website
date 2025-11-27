@@ -1,0 +1,229 @@
+marquee {
+    font-size: 24px;
+}
+
+
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    animation: example1 3s infinite alternate;
+}
+
+@keyframes example1 {
+    from { background-color: aquamarine; }
+    to { background-color: chartreuse; }
+}
+
+
+.div2 {
+    width: 100px;
+    height: 100px;
+    animation: example2 3s infinite alternate;
+}
+
+@keyframes example2 {
+    0% { background-color: aquamarine; }
+    25% { background-color: yellow; }
+    50% { background-color: rgb(255, 127, 180); }
+    75% { background-color: rgb(127, 246, 255); }
+    100% { background-color: chartreuse; }
+}
+
+
+.div3 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: example3 10s 1; 
+    animation-fill-mode: forwards; 
+    animation-direction: alternate; 
+}
+
+@keyframes example3 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: rgb(255, 127, 180); left: 400px; top: 400px; }
+    75%  { background-color: rgb(127, 246, 255); left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+}
+.div4 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: example4 3s 2s infinite alternate;
+}
+
+@keyframes example4 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: rgb(255, 127, 180); left: 400px; top: 400px; }
+    75%  { background-color: rgb(127, 246, 255); left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+}
+
+
+.div5 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: aquamarine;
+    animation: example5 3s infinite alternate;
+    animation-delay: 0s; /* стартує першою */
+    animation-fill-mode: none;
+}
+
+@keyframes example5 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: pink; left: 400px; top: 400px; }
+    75%  { background-color: lightblue; left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+}
+
+
+.div6 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: aquamarine;
+    animation: example6 3s alternate;
+    animation-delay: 8s;        /* стартує після завершення .div5 */
+    animation-iteration-count: 3;
+    animation-fill-mode: none;
+}
+
+@keyframes example6 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: pink; left: 400px; top: 400px; }
+    75%  { background-color: lightblue; left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+}
+.div7 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: aquamarine;
+    animation: example7 3s infinite alternate; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes example7 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: pink; left: 400px; top: 400px; }
+    75%  { background-color: lightblue; left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+}
+.div8 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: aquamarine;
+    animation-name: example8; 
+    animation-duration: 8s;
+    animation-delay: 3s;
+    animation-direction: reverse; 
+    animation-iteration-count: infinite; 
+}
+
+@keyframes example8 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: pink; left: 400px; top: 400px; }
+    75%  { background-color: lightblue; left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+    }
+    
+.div9 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: aquamarine;
+    animation-name: example9; 
+    animation-duration: 8s;
+    animation-delay: 3s;
+    animation-direction: alternate; 
+    animation-iteration-count: infinite; 
+}
+
+@keyframes example9 {
+    0%   { background-color: aquamarine; left: 0px; top: 0px; }
+    25%  { background-color: yellow; left: 400px; top: 0px; }
+    50%  { background-color: pink; left: 400px; top: 400px; }
+    75%  { background-color: lightblue; left: 0px; top: 400px; }
+    100% { background-color: chartreuse; left: 0px; top: 0px; }
+    }
+
+.div10 {
+    width: 100px;
+    height: 100px;
+    animation-name: example10;
+    animation-duration: 4s;
+    position: relative;
+    animation-timing-function: ease;
+}
+
+@keyframes example10 {
+    from { background-color: aquamarine; left: 0px; top: 0px;}
+    to { background-color: chartreuse;left: 1000px; top: 0px }
+  
+}
+.div11 {
+    width: 100px;
+    height: 100px;
+    animation-name: example11;
+    animation-duration: 4s;
+    position: relative;
+    animation-timing-function: linear;
+}
+
+@keyframes example11 {
+    from { background-color: aquamarine; left: 0px; top: 0px;}
+    to { background-color: chartreuse;left: 1000px; top: 0px }
+  
+}
+
+.div12 {
+    width: 100px;
+    height: 100px;
+    animation-name: example12;
+    animation-duration: 4s;
+    position: relative;
+    animation-timing-function: ease-in;
+}
+
+@keyframes example12 {
+    from { background-color: aquamarine; left: 0px; top: 0px;}
+    to { background-color: chartreuse;left: 1000px; top: 0px }
+  
+}
+div12 {
+    width: 100px;
+    height: 100px;
+    animation-name: example12;
+    animation-duration: 4s;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes example13 {
+    from { background-color: aquamarine; left: 0px; top: 0px;}
+    to { background-color: chartreuse;left: 1000px; top: 0px }
+  
+}
+div14 {
+    width: 100px;
+    height: 100px;
+    animation-name: example14;
+    animation-duration: 4s;
+    position: relative;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes example14 {
+    from { background-color: aquamarine; left: 0px; top: 0px;}
+    to { background-color: chartreuse;left: 1000px; top: 0px }
+  
+}
