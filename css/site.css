@@ -1,0 +1,25 @@
+header{
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav,aside{
+    width: 20%;
+    background-color: aqua;
+    float: left;
+}
+main{
+    width: 60%;
+    background-color: cadetblue;
+    float: left;
+}
+footer{
+    clear: both;
+    background-color: bisque;
+}
+article{
+    border: 2px dashed red;
+    margin: 5px;
+
+}

@@ -1,0 +1,56 @@
+body{
+    background-color: darkgreen;
+}
+p{
+    background-color: yellow;
+    font-size: 50px;
+    color: blue;
+    
+}
+span{
+    border: 2px dashed orange;
+    
+}
+ul{
+    background-color: bisque;
+}
+ul li{
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    font-size: 24px;
+    border: 2px dashed rebeccapurple;
+}
+ul li:hover{
+    background-color: cadetblue;
+
+   border: 2px double rebeccapurple;
+}
+#first{
+    background-color: cornflowerblue;
+    width: 500px;
+    height: 500px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    border-width: 20px;
+    border-style: dashed ridge dotted double;
+    border-color: yellow blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#second{
+    width: 600px;
+    height: 600px;
+    background-color: aquamarine;
+    padding: 50px;
+}
+#third, #fourth{
+    width: 700px;
+    height: 200px;
+    background-color: brown;
+    margin: 50px;
+    padding: 50px;
+
+}
