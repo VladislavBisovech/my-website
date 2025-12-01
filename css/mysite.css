@@ -1,0 +1,384 @@
+
+/* ================= Основні стилі ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* фон сайту */
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= Поради ================= */
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.tip-block {
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    animation: floatBlock 4s ease-in-out infinite alternate;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Кольорові блоки по черзі */
+.tip-block:nth-child(1) { background-color: #ffe0e0; }
+.tip-block:nth-child(2) { background-color: #e0ffe0; }
+.tip-block:nth-child(3) { background-color: #e0e0ff; }
+
+/* Кольорові літери */
+.tip-block p {
+    background: linear-gradient(45deg, #e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Підсвічування при наведенні */
+.tip-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* вирівнювання по центру */
+    align-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item video,
+.gallery-item img {
+    width: 300px;   /* однаковий розмір для всіх */
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.gallery-item figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Кольоровий напис над відео/зображенням */
+.gallery-item .label {
+    position: absolute;
+    top: -25px; /* над елементом */
+    background-color: rgba(255, 165, 0, 0.8); /* помаранчевий фон */
+    color: white;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Адаптивність */
+@media (max-width: 800px) {
+    .tip-block {
+        width: 80%;
+    }
+}
+
+/* ================= Header ================= */
+header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.bgvideo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bgvideo video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.bgvideo h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: bold;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    background: linear-gradient(45deg, #e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= Навігація ================= */
+nav {
+    display: flex;
+    justify-content: center; /* вирівнювання по центру */
+    gap: 20px; /* відстань між кнопками */
+    margin: 20px 0;
+}
+
+.nav-block {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px; /* великий шрифт */
+    font-weight: bold;
+    text-decoration: none;
+    color:black; /* колір тексту */
+    background-color: cadetblue; /* помаранчевий фон */
+    border-radius: 10px; /* округлі кути */
+    transition: transform 0.2s, background-color 0.2s;
+    text-align: center;
+}
+
+.nav-block:hover {
+    background-color:black; /* темніший помаранчевий при наведенні */
+    transform: scale(1.1); /* ефект збільшення */
+}
+
+
+nav a.myButton {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a.myButton:hover {
+    background-color: #2980b9;
+}
+
+/* ================= Основний контент ================= */
+main {
+    padding: 20px;
+}
+
+/* Центрування заголовків секцій */
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= Блоки маршрутів ================= */
+.block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.animated-block {
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: floatBlock 4s ease-in-out infinite alternate;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+@keyframes floatBlock {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.animated-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.animated-block img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Кольорові блоки через nth-child */
+.animated-block:nth-child(1) { background-color: #ffcccc; }
+.animated-block:nth-child(2) { background-color: #ccffcc; }
+.animated-block:nth-child(3) { background-color: #ccccff; }
+
+/* Кольорові літери в блоках */
+.animated-block h3, .animated-block p {
+    font-weight: bold;
+    background: linear-gradient(45deg, #e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= Галерея ================= */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= Footer ================= */
+footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Хедер з відео */
+.bgvideo {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.bgvideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Заголовок Мої подорожі з новим шрифтом і кольором, без тіні */
+.bgvideo h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4500; /* новий колір літер, помаранчево-червоний */
+    font-family: 'Verdana', sans-serif; /* новий шрифт */
+    font-size: 4vw;
+    font-weight: bold;
+    z-index: 2;
+    text-align: center;
+    text-shadow: none; /* прибрано тінь */
+    animation: pulse 2s infinite alternate; /* залишаємо анімацію пульсації */
+}
+
+/* Анімація пульсації заголовку */
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* ================= Адаптивність ================= */
+@media (max-width: 800px) {
+    .bgvideo h1 { font-size: 6vw; }
+
+    .block-container, .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animated-block, .gallery-img {
+        width: 80%;
+        height: auto;
+    }
+
+    nav a.myButton {
+        display: block;
+        margin: 10px auto;
+    }
+}
+/* ================= Центрування секції Контакти ================= */
+#contact {
+    display: flex;
+    justify-content: center; /* горизонтальне центрування */
+    align-items: center;     /* вертикальне центрування */
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #3498db; /* світлий фон для виділення секції */
+    gap: 15px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+#contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #3498db;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #2980b9;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій сайт про подорожі</title>
+    <link rel="stylesheet" href="css/mysite.css">
+</head>
+<body>
+    <header>
+        <div class="bgvideo">
+            <video src="video/travel.mp4" autoplay muted loop></video>
+            <h1>Мої подорожі</h1>
+        </div>
+    </header>
+
+    <nav>
+    <a href="#routes" class="nav-block">Маршрути</a>
+    <a href="#tips" class="nav-block">Поради</a>
+    <a href="#gallery" class="nav-block">Галерея</a>
+    <a href="#contact" class="nav-block">Контакти</a>
+</nav>
+
+    <main>
+        <section id="routes">
+            <h2>Цікаві маршрути</h2>
+            <div class="block-container">
+                <div class="animated-block">
+                    <img src="https://tykyiv.com/media/ckeditor_uploads/2023/04/06/andrews-descent_0.jpg" alt="Київ">
+                    <h3>Київ</h3>
+                    <p>Прогулянки по Старому місту та Андріївський узвіз.</p>
+                </div>
+                <div class="animated-block">
+                    <img src="https://eventukraine.com/ev/wp-content/uploads/2019/09/Depositphotos_14017349_s-2019.jpg" alt="Львів">
+                    <h3>Львів</h3>
+                    <p>Кав’ярні, музеї та атмосферні вулички.</p>
+                </div>
+                <div class="animated-block">
+                    <img src="https://sky-post.odesa.ua/wp-content/uploads/2023/11/4366434363.jpg" alt="Одеса">
+                    <h3>Одеса</h3>
+                    <p>Прогулянки по Приморському бульвару та пляж.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips">
+    <h2>Корисні поради</h2>
+    <div class="tips-container">
+        <div class="tip-block">
+            <p>Завжди перевіряйте погоду перед поїздкою.</p>
+        </div>
+        <div class="tip-block">
+            <p>Беріть зручне взуття для прогулянок.</p>
+        </div>
+        <div class="tip-block">
+            <p>Використовуйте локальні карти та додатки.</p>
+        </div>
+    </div>
+    
+
+        
+    <section id="gallery">
+    <h2>Галерея</h2>
+<div class="gallery-container">
+
+    <figure class="gallery-item">
+        <div class="label" style="background-color: #4CAF50;">Ліс</div>
+        <video controls>
+            <source src="video2/132793-754897675_small.mp4" type="video/mp4">
+        </video>
+        <figcaption>Ліс</figcaption>
+    </figure>
+
+   
+    <figure class="gallery-item">
+        <div class="label" style="background-color: #8B4513;">Гори</div>
+        <video controls>
+            <source src="video2/202982-919365848_tiny.mp4" type="video/mp4">
+        </video>
+        <figcaption>Гори</figcaption>
+    </figure>
+
+    
+    <figure class="gallery-item">
+        <div class="label" style="background-color: #2196F3;">Пляж</div>
+        <video controls>
+            <source src="video2/262215_medium.mp4" type="video/mp4">
+        </video>
+        <figcaption>Пляж</figcaption>
+    </figure>
+</div>
+    </main>
+
+    
+  
+<div id="audioControl" style="position: fixed; top: 10px; right: 10px; z-index: 10;">
+    <button id="toggleAudio">Включити звук</button>
+    <audio id="bgAudio" src="audio/aves_sea_gull.mp3" loop></audio>
+</div>
+
+<button id="toTop" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+">Наверх</button>
+
+
+<section id="contact">
+    <h2>Контакти</h2>
+    <p>Email: vlad.travel@example.com</p>
+    <p>Телефон: +380 00 000 0000</p>
+    
+    <h3>Напишіть нам</h3>
+    <form id="contactForm" style="max-width: 400px; margin: 20px auto; display: flex; flex-direction: column; gap: 10px;">
+        <input type="text" name="name" placeholder="Ваше ім’я" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        <input type="email" name="email" placeholder="Ваш Email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        <textarea name="message" placeholder="Ваше повідомлення" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; resize: vertical;"></textarea>
+        <button type="submit" style="padding: 10px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Відправити</button>
+    </form>
+</section>
+
+
+<script>
+   
+    const audio = document.getElementById('bgAudio');
+    const toggleBtn = document.getElementById('toggleAudio');
+    toggleBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            toggleBtn.textContent = 'Вимкнути звук';
+        } else {
+            audio.pause();
+            toggleBtn.textContent = 'Включити звук';
+        }
+    });
+
+   
+    const toTopBtn = document.getElementById('toTop');
+    toTopBtn.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+ 
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Дякуємо! Ваше повідомлення надіслано.');
+        form.reset();
+    });
+</script>
